@@ -13,22 +13,28 @@ html { font-size: 16px ;}
     --purple: #282162;
     --dark-orange: #ff6200;
     --grey: #848194
+    --animation-delay: 0.5s;
+    --duration: 1000ms;
+    --iterations: 1;
 
 }
+
+::before,
+	::after {
+		box-sizing: border-box;
+	}
+
 
 h1 { color: #fff ; font-family: 'Lato', sans-serif; 
     font-weight: 300; line-height: 58px; margin: 0 0 58px; }
 
 
-p { color: #adb7bd; font-family: 'Lucida Sans', Arial, sans-serif; 
-    font-size: 16px; line-height: 26px; text-indent: 30px; margin: 0; }
+p { font-family: 'Inder', sans-serif; line-height: 28px; margin-bottom: 15px; color: white; font-size: 1.1rem;}
 
     a { color: #adb7bd; font-family: 'Lucida Sans', Arial, sans-serif; 
         font-size: 16px; line-height: 26px; text-indent: 30px; margin: 0; }
 
-        span {
-            
-        }
+        
 
 body{
     background-color: black;
@@ -85,6 +91,7 @@ body{
 .navbar-links a:hover {
     color: white;
     transition: color 1s;
+    font-weight: 700 bold;
 }
 
 .toggle-button {
@@ -136,4 +143,86 @@ body{
     .navbar-links.active {
         display: flex;
     }
+}
+
+/*  LANDING CONFIG */ 
+
+.landing-page {
+    display: flex;
+    width: 100%;
+    height: 30rem;
+    background : white;
+    
+
+}
+
+/*  LANDING HEADINGS */
+
+.landing-page .landing-heading {
+    height: inherit;
+    width: 100%;
+    text-align: center;
+
+    background-color: var(--express);
+        
+}
+
+.landing-page .landing-heading h1 {
+    color: var(--dark-orange); font-family: "Great Vibes", cursive; font-size: 4rem; line-height: 160px; font-weight: normal; margin-bottom: 0px; margin-top: 40px; text-align: center; text-shadow: 0 1px 1px #fff; 
+}
+
+.landing-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10rem;
+}
+
+
+
+.landing-btn > button {
+    background-color: var(--dark-orange);
+  border: none;
+  color: white;
+  padding: 0.8rem;
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 2rem;
+  opacity: 0.6;
+  transition: 0.3s;
+  border-radius: 0.5rem;
+}
+
+@media screen and (max-width : 400px) {
+    .landing-btn > button {
+        color: black;
+        margin-bottom: 6rem;
+    }
+    .landing-heading > p{
+        font-size: 0.5rem;
+    }
+}
+
+@media screen and (max-width : 600px) {
+    .landing-btn > button {
+        color: black;
+        margin-top: -50px;
+    }
+    .landing-heading > p{
+        font-size: 1.3rem;
+    }
+}
+
+.landing-btn > button:hover {
+    opacity: 2;
+}
+
+/* LANDING EFFECT */
+
+.landing-effect {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--express);
 }
