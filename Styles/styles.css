@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 
-html { font-size: 16px ;}
+html { font-size: 16px ; scroll-behavior: smooth;}
 
 :root{
     --express: #000037;
@@ -25,13 +25,13 @@ html { font-size: 16px ;}
 	}
 
 
-h1 { color: #fff ; font-family: 'Lato', sans-serif; 
+h1 { color: #fff ; font-family: 'Inder', sans-serif; 
     font-weight: 300; line-height: 58px; margin: 0 0 58px; }
 
 
 p { font-family: 'Inder', sans-serif; line-height: 28px; margin-bottom: 15px; color: white; font-size: 1.1rem;}
 
-    a { color: #adb7bd; font-family: 'Lucida Sans', Arial, sans-serif; 
+    a { color: #adb7bd; font-family: 'Inder', Arial, sans-serif; 
         font-size: 16px; line-height: 26px; text-indent: 30px; margin: 0; }
 
         
@@ -152,8 +152,15 @@ body{
     width: 100%;
     height: 30rem;
     background : white;
-    
+}
 
+@media screen and (max-width : 600px) {
+    .landing-page {
+        display: inline-block;
+    }
+    .landing-effect .rev-block {
+        display:  none;
+    }
 }
 
 /*  LANDING HEADINGS */
@@ -223,6 +230,72 @@ body{
 .landing-effect {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
     background-color: var(--express);
 }
+.landing-effect > h1 {
+    text-transform: uppercase;
+    letter-spacing: 3pt;
+    font-family: Chicle;
+    color: #fff;
+    font-size: 1rem;
+    padding: 2rem 1rem;
+    position: absolute;
+    text-align: center;
+    
+  }
+  .rev-block{
+    position: absolute;
+  }
+  .rev-block span {
+    opacity: 0;
+    animation: appear-text 0.0017s linear forwards;
+    animation-delay: 3s;
+  }
+  .rev-block:after {
+    content: '';
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background: #00f0b5;
+    animation: rev-block 1.5s cubic-bezier(0.2, 1, 0.2, 1) forwards;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes rev-block {
+    0% {
+      left: 0;
+      width: 0%;
+    }
+    50% {
+      left: 0;
+      width: 100%;
+    }
+    100% {
+      left: 100%;
+      width: 0%;
+    }
+  }
+  
+  @keyframes appear-text {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .onemore {
+    top: 20%;
+    left: 60%;
+  }
+  .onemore span {
+    animation-delay: 3.2s;
+  }
+  .onemore.rev-block:after {
+    animation-delay: 3s;
+    background: var(--dark-orange);
+  }
