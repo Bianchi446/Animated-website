@@ -1,0 +1,23 @@
+{
+  "name": "port",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass --include-path scss Styles/styles.scss Styles/Output.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bianchi446/portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bianchi446/portfolio/issues"
+  },
+  "homepage": "https://github.com/Bianchi446/portfolio#readme",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
